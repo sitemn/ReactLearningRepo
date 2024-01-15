@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
-import Main2 from './Main2';
+import Main4 from './Main4';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       </header> */}
 
       <Header/> 
-      <Main2 />
+      <Main4 />
       <Footer/>  
     </div>
   );
