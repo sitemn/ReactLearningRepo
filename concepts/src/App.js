@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
-import Main4 from './Main4';
+import ShoppingCart from './ShoppingCart';
+import Main10 from './Main10';
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
         </a>
       </header> */}
 
-      <Header/> 
-      <Main4 />
-      <Footer/>  
+      {/* <Header/>  */}
+      <Main10 />
+      {/* <Footer/>   */}
     </div>
   );
 }

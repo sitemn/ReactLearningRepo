@@ -1,0 +1,11 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+}
+
+.product-item {
+    border: 1px solid #070101;
+    padding: 10px;
+    border-radius: 5px;
+}

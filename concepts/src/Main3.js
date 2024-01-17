@@ -28,7 +28,8 @@ export default function Main3() {
   const myUpdatedCar = {...myCar, ...updatedCar};
   return (
     <div>
-      {myUpdatedCar.brand}
+      {/* {myUpdatedCar.brand} */}
+      <div>{JSON.stringify(myUpdatedCar)}</div>
     </div>
   )
 }
