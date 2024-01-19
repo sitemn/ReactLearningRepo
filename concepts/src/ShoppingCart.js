@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Main7.css';
 
+
 export default function ShoppingCart() {
     const [name, setName] = useState('');
     const [cart, setCart] = useState([]);
