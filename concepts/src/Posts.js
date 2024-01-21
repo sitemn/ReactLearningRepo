@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
+import Comments from './Comments';
 
 export default function Posts({userId}) {
     // const usersUrl = "https://jsonplaceholder.typicode.com/users";
@@ -28,27 +29,27 @@ export default function Posts({userId}) {
     }, [userId]);
 
 
-    const handleShowComments = async (postId) => {
-        // if (!comments[id]) {
-        //     const commentsUrl = `https://jsonplaceholder.typicode.com/comments?postId=${id}`;
-        //     const response = await axios.get(commentsUrl);
-        //     setComments((preComments) => ({ ...preComments, [id]: response.data }));
-        // }
-        const currentPostComments = comments[postId];
-        if (!currentPostComments) {
-            const commentsUrl = `https://jsonplaceholder.typicode.com/comments?postId=${postId}`;
-            const response = await axios.get(commentsUrl);
-            setComments(prevComments => ({
-                ...prevComments,
-                [postId]: { data: response.data, isVisible: true }
-            }));
-        } else {
-            setComments(prevComments => ({
-                ...prevComments,
-                [postId]: { ...currentPostComments, isVisible: !currentPostComments.isVisible }
-            }));
-        }
-    };
+    // const handleShowComments = async (postId) => {
+    //     // if (!comments[id]) {
+    //     //     const commentsUrl = `https://jsonplaceholder.typicode.com/comments?postId=${id}`;
+    //     //     const response = await axios.get(commentsUrl);
+    //     //     setComments((preComments) => ({ ...preComments, [id]: response.data }));
+    //     // }
+    //     const currentPostComments = comments[postId];
+    //     if (!currentPostComments) {
+    //         const commentsUrl = `https://jsonplaceholder.typicode.com/comments?postId=${postId}`;
+    //         const response = await axios.get(commentsUrl);
+    //         setComments(prevComments => ({
+    //             ...prevComments,
+    //             [postId]: { data: response.data, isVisible: true }
+    //         }));
+    //     } else {
+    //         setComments(prevComments => ({
+    //             ...prevComments,
+    //             [postId]: { ...currentPostComments, isVisible: !currentPostComments.isVisible }
+    //         }));
+    //     }
+    // };
 
   return (
     <div>
@@ -57,18 +58,30 @@ export default function Posts({userId}) {
             <div>
                 <hr></hr>
                 {posts && posts.map((post) => (
-                    <div key={post.id}>
-                        <h4>{post.title}</h4>
-                        <p>{post.body}</p>
-                        <button onClick={() => handleShowComments(post.id)}>
-                            {comments[post.id]?.isVisible ? 'Hide Comments' : 'Show Comments'}
-                        </button>
-                        {comments[post.id]?.isVisible && comments[post.id].data.map((comment) => (
-                                <li key={comment.id}>
-                                    {comment.email}: {comment.body}
-                                </li>
-                            ))}
+                    <div>
+                        <div key={post.id}>
+                            <h4>{post.title}</h4>
+                            <p>{post.body}</p>
+                            <details>
+                                <summary>comments</summary>
+                                <div><Comments postId={post.id} /></div>
+                            </details>
+                        </div>
+                        <hr></hr>
                     </div>
+                    
+                    // <div key={post.id}>
+                    //     <h4>{post.title}</h4>
+                    //     <p>{post.body}</p>
+                    //     <button onClick={() => handleShowComments(post.id)}>
+                    //         {comments[post.id]?.isVisible ? 'Hide Comments' : 'Show Comments'}
+                    //     </button>
+                    //     {comments[post.id]?.isVisible && comments[post.id].data.map((comment) => (
+                    //             <li key={comment.id}>
+                    //                 {comment.email}: {comment.body}
+                    //             </li>
+                    //         ))}
+                    // </div>
                 ))}
             </div>
             

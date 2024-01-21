@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "id": "1",
+      "password": "0000"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "id": "2",
+      "password": "0000"
+    },
+    {
+      "name": "Emily Johnson",
+      "email": "emily.johnson@example.com",
+      "id": "3",
+      "password": "0000"
+    }
+  ], 
+
+  "orders": [
+    {
+        "orderId": 1,
+        "customerId": 2,
+        "items": [
+            {"productId": 1, "quantity": 2},
+            {"productId": 3, "quantity": 1}
+        ],
+        "totalPrice": 1199.97
+    },
+    {
+        "orderId": 2,
+        "customerId": 6,
+        "items": [
+            {"productId": 4, "quantity": 1},
+            {"productId": 2, "quantity": 2}
+        ],
+        "totalPrice": 1399.97
+    }
+  ],
+
+  "Products" : [
+    {
+        "id": 1,
+        "name": "Laptop",
+        "price": 999.99,
+        "quantity": 1,
+        "description": "High performance laptop with 16GB RAM",
+        "rate": 4.5,
+        "review": 120,
+        "imageUrl": "/images/coffee.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "price": 799.99,
+        "quantity": 1,
+        "description": "Latest smartphone with advanced features",
+        "rate": 4.7,
+        "review": 200,
+        "imageUrl": "/images/coffee.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Headphones",
+        "price": 199.99,
+        "quantity": 1,
+        "description": "Noise cancelling wireless headphones",
+        "rate": 4.3,
+        "review": 90,
+        "imageUrl": "/images/coffee.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Smartwatch",
+        "price": 299.99,
+        "quantity": 1,
+        "description": "Water-resistant smartwatch with long battery life",
+        "rate": 4.6,
+        "review": 150,
+        "imageUrl": "/images/coffee.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Speaker",
+        "price": 129.99,
+        "quantity": 1,
+        "description": "Portable speaker with crystal-clear sound quality",
+        "rate": 4.8,
+        "review": 180,
+        "imageUrl": "/images/coffee.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "E-Reader",
+        "price": 89.99,
+        "quantity": 1,
+        "description": "Lightweight e-reader with paper-like display",
+        "rate": 4.4,
+        "review": 75,
+        "imageUrl": "/images/coffee.jpeg"
+    }
+]
+
+  
+ 
+}

@@ -1,0 +1,19 @@
+ {
+    "todoList": [
+        {
+            "task": "Grocery Shopping",
+            "isComplete": false,
+            "id": "1"
+        },
+        {
+            "task": "Finish Project Report",
+            "isComplete": false,
+            "id": "2"
+        },
+        {
+            "task": "Call Mark",
+            "isComplete": false,
+            "id": "3"
+        }
+    ]
+}
